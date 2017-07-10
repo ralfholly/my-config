@@ -1,0 +1,29 @@
+xterm*faceName: DejaVuSansMono
+xterm*faceSize: 9
+xterm*utf8: 1
+xterm*toolBar: false
+
+xterm*foreground: #d5d5d5
+xterm*background: #131313
+!xterm*cursorColor: #ffc000
+xterm*cursorColor: #00ff00
+
+!xterm*foreground: black
+!xterm*background: white
+!xterm*cursorColor: #ffaf00
+
+xterm*loginShell: true
+xterm*geometry: 120x48
+xterm*cursorBlink: false
+
+XTerm.VT100.translations: #override \
+Meta <Key> minus: smaller-vt-font() \n\
+Meta <Key> plus: larger-vt-font() \n\
+
+!Meta <Key> KP_Subtract: smaller-vt-font() \n\
+!Meta <Key> KP_Add: larger-vt-font() \n\
+!Super <Key> minus: smaller-vt-font() \n\
+!Super <Key> plus: larger-vt-font() \n\
+!Super <Key> KP_Subtract: smaller-vt-font() \n\
+!Super <Key> KP_Add: larger-vt-font() \n
+
