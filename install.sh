@@ -1,9 +1,35 @@
 #!/bin/bash
 
+###
+# Replaces config files in home directory with
+# symbolic links to config files in repo.
+#
+
+set -e
+
+TARGETS=(\
+    .Xdefaults \
+    .vimrc \
+    .bashrc \
+    .tmux.conf \
+)
+
 THIS_DIR=$(dirname $0)
-pushd "$THIS_DIR"
+pushd "$THIS_DIR" >/dev/null
+BACKUP_DIR=backup-$(date +%Y%m%d)
 
-# TODO
+for target in ${TARGETS[*]}; do
+    if [ -h ~/$target ]; then
+        # Link exists alread. Do nothing.
+        echo "Skipping link $target since it exists already"
+        continue
+    elif [ -e ~/$target ]; then
+        mkdir -p "$BACKUP_DIR"
+        echo "Backing up $target to $BACKUP_DIR"
+        mv -i ~/$target $BACKUP_DIR
+    fi
+    echo "Creating link to $target"
+    ln -s $(readlink -f $target) ~/$target
+done
 
-popd
-
+popd >/dev/null
