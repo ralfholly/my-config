@@ -175,6 +175,8 @@ ca _cscope Cscope
 " GCC integration
 ca _gcc cex system("gcc -Wall -W -g " . expand ("%") . " -o " . expand("%:t:r")) \| cw
 ca _g++ cex system("g++ -Wall -W -g " . expand ("%") . " -o " . expand("%:t:r")) \| cw
+ca _g11++ cex system("g++ -std=c++11 -Wall -W -g " . expand ("%") . " -o " . expand("%:t:r")) \| cw
+ca _g14++ cex system("g++ -std=c++14 -Wall -W -g " . expand ("%") . " -o " . expand("%:t:r")) \| cw
 
 " Pylint integration
 ca _pylint cex system("pylint " . expand("%")) \| cw
