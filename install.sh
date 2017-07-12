@@ -12,6 +12,9 @@ TARGETS=(\
     .vimrc \
     .bashrc \
     .tmux.conf \
+    .vim \
+    .vimbak \
+    .cgdb \
 )
 
 THIS_DIR=$(dirname $0)
