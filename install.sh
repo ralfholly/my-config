@@ -20,9 +20,8 @@ BACKUP_DIR=backup-$(date +%Y%m%d)
 
 for target in ${TARGETS[*]}; do
     if [ -h ~/$target ]; then
-        # Link exists alread. Do nothing.
-        echo "Skipping link $target since it exists already"
-        continue
+        echo "Removing existing link $target"
+        rm ~/$target
     elif [ -e ~/$target ]; then
         mkdir -p "$BACKUP_DIR"
         echo "Backing up $target to $BACKUP_DIR"
