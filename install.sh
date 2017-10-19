@@ -15,6 +15,7 @@ TARGETS=(\
     .vim \
     .vimbak \
     .cgdb \
+    .inputrc \
 )
 
 THIS_DIR=$(dirname $0)
