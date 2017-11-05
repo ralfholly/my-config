@@ -12,7 +12,6 @@ xterm*cursorColor: #00ff00
 !xterm*background: white
 !xterm*cursorColor: #ffaf00
 
-xterm*loginShell: true
 xterm*geometry: 120x48
 xterm*cursorBlink: false
 
