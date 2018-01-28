@@ -19,7 +19,8 @@ PROMPT_COMMAND='
         echo -n -e "\033k$MYPWD\033\\"
     fi 
 '
-export PS1='\A(\j)\w$(__git_ps1 " <\[\e[38;5;215m\]%s\[\e[0m\]")> '
+#export PS1='[\u@\j]\A(\j)\w$(__git_ps1 " <\[\e[38;5;215m\]%s\[\e[0m\]")> '
+export PS1='[\u@\H] \A(\j)\w$(__git_ps1 " <\[\e[38;5;215m\]%s\[\e[0m\]")> '
 export GTEST_COLOR=1
 export EDITOR=vim
 export FIND_SOURCE="cpp CPP c C cc H h hpp HPP [ly] java s asm pl py"
