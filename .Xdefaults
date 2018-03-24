@@ -13,7 +13,10 @@ xterm*cursorColor: #00ff00
 !xterm*cursorColor: #ffaf00
 
 xterm*geometry: 120x48
-xterm*cursorBlink: false
+xterm*cursorBlink: true
+xterm*cursorOnTime: 500
+xterm*cursorOffTime: 500
+
 
 XTerm.VT100.translations: #override \
 Meta <Key> minus: smaller-vt-font() \n\
