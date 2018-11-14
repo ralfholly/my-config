@@ -14,7 +14,8 @@
     frag = magenta bold
 [push]
     default = simple
-
+[core]
+	excludesfile = ~/.gitignore
 
 [include]
     path = ~/.gitconfig.local
