@@ -1,0 +1,20 @@
+[color]
+    ui = auto
+[diff]
+    submodule = log
+[status]
+    submoduleSummary = true
+[color "status"]
+    untracked = red bold
+    changed = red bold
+[color "diff"]
+    old = red bold
+    new = blue bold
+    meta = yellow
+    frag = magenta bold
+[push]
+    default = simple
+
+
+[include]
+    path = ~/.gitconfig.local
