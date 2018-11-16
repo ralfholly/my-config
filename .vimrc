@@ -232,6 +232,9 @@ hi CursorLineNr term=bold ctermfg=46 guifg=#00FF00
 " hi LineNr term=underline ctermfg=238 ctermbg=233 guifg=#605958 guibg=#151515
 "
 "
+if filereadable($HOME . "/.vimrc.local")
+	source $HOME/.vimrc.local
+endif
 if filereadable(".vimrc.local")
 	source .vimrc.local
 endif
