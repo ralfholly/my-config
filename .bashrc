@@ -10,6 +10,7 @@ export HISTSIZE=5000
 export HISTCONTROL=ignoredups:erasedups  # no duplicate entries
 shopt -s histappend 
 shopt -s globstar
+shopt -s autocd
 
 PROMPT_COMMAND='
     [ $? -eq 0 ] || echo -e -n "\a"
