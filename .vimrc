@@ -12,7 +12,7 @@ nmap <Leader>e :up \| !(%\|unix2dos)<CR>
 nmap <Leader>g :grep -k <C-R><C-W> . <CR>
 nmap <Leader>G :grep -k <C-R><C-W> 
 nmap <Leader>r :up\|!./%<CR>
-nmap <Leader>a :up \| cex system("PYTHONPATH=$PYTHONPATH:. pylint3 " . expand("%")) \| cw <CR>
+nmap <Leader>a :up \| cex system("PYTHONPATH=$PYTHONPATH:. pylint " . expand("%")) \| cw <CR>
 nmap <Leader>b :up \| !python3 -m unittest % <CR>
 nmap <Leader>h :2match Todo /<C-R><C-W>/<CR>
 nmap <Leader>H :2match<CR>
