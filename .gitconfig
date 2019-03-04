@@ -19,11 +19,9 @@
 [push]
     default = simple
 [core]
-	excludesfile = /home/ralf/.gitignore
-
+    excludesfile = ~/.gitignore
 [tig "bind"]
-    generic = D !git difftool --tool=vimdiff --no-prompt --trust-exit-code %(commit)^!
-
-
+    # generic = D !git difftool --tool=vimdiff --no-prompt --trust-exit-code %(commit)^!
+    generic = D !git-review2 %(commit)^ %(commit)
 [include]
     path = ~/.gitconfig.local
