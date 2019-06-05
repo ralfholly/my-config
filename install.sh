@@ -16,6 +16,8 @@ TARGETS=(\
     .vimbak \
     .cgdb \
     .inputrc \
+    .gitconfig \
+    .pylintrc \
 )
 
 THIS_DIR=$(dirname $0)

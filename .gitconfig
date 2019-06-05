@@ -1,0 +1,27 @@
+[color]
+    ui = auto
+[diff]
+    submodule = log
+[status]
+    submoduleSummary = true
+[color "status"]
+    untracked = red bold
+    changed = red bold
+    added = green bold
+[color "diff"]
+    old = red bold
+    new = blue bold
+    meta = yellow
+    frag = magenta bold
+[color "branch"]
+    remote =  red bold
+    current = green bold
+[push]
+    default = simple
+[core]
+    excludesfile = ~/.gitignore
+[tig "bind"]
+    # generic = D !git difftool --tool=vimdiff --no-prompt --trust-exit-code %(commit)^!
+    generic = D !git-review2 %(commit)^ %(commit)
+[include]
+    path = ~/.gitconfig.local

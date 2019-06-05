@@ -12,7 +12,7 @@ nmap <Leader>e :up \| !(%\|unix2dos)<CR>
 nmap <Leader>g :grep -k <C-R><C-W> . <CR>
 nmap <Leader>G :grep -k <C-R><C-W> 
 nmap <Leader>r :up\|!./%<CR>
-nmap <Leader>a :up \| cex system("PYTHONPATH=$PYTHONPATH:. pylint3 " . expand("%")) \| cw <CR>
+nmap <Leader>a :up \| cex system("PYTHONPATH=$PYTHONPATH:. pylint " . expand("%")) \| cw <CR>
 nmap <Leader>b :up \| !python3 -m unittest % <CR>
 nmap <Leader>h :2match Todo /<C-R><C-W>/<CR>
 nmap <Leader>H :2match<CR>
@@ -226,12 +226,15 @@ ca _shortoff match
 ca _elem 2match SpecialKey />\zs[^>]\+\ze</
 ca _elemoff 2match
 
-hi CursorLine ctermbg=235
+hi CursorLine ctermbg=237
 " For jellybeans colorscheme
 hi CursorLineNr term=bold ctermfg=46 guifg=#00FF00
 " hi LineNr term=underline ctermfg=238 ctermbg=233 guifg=#605958 guibg=#151515
 "
 "
+if filereadable($HOME . "/.vimrc.local")
+	source $HOME/.vimrc.local
+endif
 if filereadable(".vimrc.local")
 	source .vimrc.local
 endif
