@@ -15,7 +15,11 @@ shopt -s autocd
 PROMPT_COMMAND='
     [ $? -eq 0 ] || echo -e -n "\a"
     if [[ $TERM = screen* ]]; then
-        MYPWD="${PWD/#${HOME}/\~}"
+        if [ -z $TMUX_PROMPT ]; then
+            MYPWD="${PWD/#${HOME}/\~}"
+        else
+            MYPWD="$TMUX_PROMPT"
+        fi
         [ ${#MYPWD} -gt 30 ] && MYPWD=..${MYPWD:${#MYPWD}-28}
         echo -n -e "\033k$MYPWD\033\\"
     fi 
