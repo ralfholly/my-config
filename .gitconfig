@@ -2,6 +2,7 @@
     ui = auto
 [diff]
     submodule = log
+    tool = vimdiff
 [status]
     submoduleSummary = true
 [color "status"]
