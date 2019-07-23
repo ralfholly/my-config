@@ -26,3 +26,5 @@
     generic = D !git-review2 %(commit)^ %(commit)
 [include]
     path = ~/.gitconfig.local
+[log]
+	decorate = auto
