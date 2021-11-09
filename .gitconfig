@@ -20,7 +20,7 @@
 [push]
     default = simple
 [core]
-    excludesfile = ~/.gitignore
+	excludesFile = ~/.gitignore
 [tig "bind"]
     # generic = D !git difftool --tool=vimdiff --no-prompt --trust-exit-code %(commit)^!
     generic = D !git-review2 %(commit)^ %(commit)
@@ -28,3 +28,6 @@
     path = ~/.gitconfig.local
 [log]
 	decorate = auto
+[user]
+	email = ralf.holly@approxion.com
+	name = Ralf Holly

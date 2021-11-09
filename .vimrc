@@ -16,6 +16,7 @@ nmap <Leader>a :up \| cex system("PYTHONPATH=$PYTHONPATH:. pylint " . expand("%"
 nmap <Leader>b :up \| !python3 -m unittest % <CR>
 nmap <Leader>h :2match Todo /<C-R><C-W>/<CR>
 nmap <Leader>H :2match<CR>
+nmap <Leader>! :up \| make<CR>
 map <Up> gk
 map <Down> gj
 imap <Up> <C-O>gk
@@ -228,7 +229,7 @@ ca _elemoff 2match
 
 hi CursorLine ctermbg=237
 " For jellybeans colorscheme
-hi CursorLineNr term=bold ctermfg=46 guifg=#00FF00
+hi CursorLineNr term=bold cterm=NONE ctermfg=46 guifg=#00FF00
 " hi LineNr term=underline ctermfg=238 ctermbg=233 guifg=#605958 guibg=#151515
 "
 "
