@@ -229,7 +229,7 @@ ca _elemoff 2match
 
 hi CursorLine ctermbg=237
 " For jellybeans colorscheme
-hi CursorLineNr term=bold cterm=NONE ctermfg=46 guifg=#00FF00
+hi CursorLineNr term=bold cterm=bold ctermfg=46 guifg=#00FF00
 " hi LineNr term=underline ctermfg=238 ctermbg=233 guifg=#605958 guibg=#151515
 "
 "
