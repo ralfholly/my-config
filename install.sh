@@ -19,6 +19,7 @@ TARGETS=(\
     .gitconfig \
     .pylintrc \
     .config/i3/config \
+    .config/i3status/config \
 )
 
 THIS_DIR=$(dirname $0)
