@@ -12,9 +12,11 @@ font pango:DejaVu Sans Mono 8
 # The combination of xss-lock, nm-applet and pactl is a popular choice, so
 # they are included here as an example. Modify as you see fit.
 
+set $i3lockwall i3lock -n --color 000020
+
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
 # screen before suspend. Use loginctl lock-session to lock your screen.
-exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
+exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lockwall --nofork
 
 # NetworkManager is the most popular way to manage wireless networks on Linux,
 # and nm-applet is a desktop environment-independent system tray GUI for it.
@@ -222,8 +224,7 @@ mode "$mode_system" {
 }
 
 # lock
-set $i3lockwall i3lock -n --color 000020
-exec_always --no-startup-id xautolock -time 10 -locker "$i3lockwall" -killtime 60 -killer "systemctl suspend"
+exec_always --no-startup-id xautolock -time 10 -locker "$i3lockwall" -killtime 20 -killer "systemctl suspend"
 bindsym Ctrl+Mod1+l exec --no-startup-id $i3lockwall
 bindsym Ctrl+Mod1+Delete MODE "$mode_system"
 

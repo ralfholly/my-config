@@ -17,6 +17,8 @@ xterm*cursorBlink: true
 xterm*cursorOnTime: 500
 xterm*cursorOffTime: 500
 
+# XTerm*bellIsUrgent: true
+# URxvt.urgentOnBell: true
 
 XTerm.VT100.translations: #override \
 Meta <Key> minus: smaller-vt-font() \n\
