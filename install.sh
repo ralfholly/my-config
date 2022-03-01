@@ -36,6 +36,7 @@ for target in ${TARGETS[*]}; do
         mv -i ~/$target $BACKUP_DIR
     fi
     echo "Creating link to $target"
+    mkdir -p ~/$(dirname $target)
     ln -s $(readlink -f $target) ~/$target
 done
 
