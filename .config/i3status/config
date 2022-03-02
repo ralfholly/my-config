@@ -32,6 +32,8 @@ ethernet _first_ {
 
 cpu_usage {
         format = "CPU: %usage"
+        degraded_threshold = "20"
+        max_threshold = "80"
 }
 
 battery all {
@@ -42,6 +44,7 @@ battery all {
 
 disk "/" {
         format = "%avail"
+        low_threshold = "10"
 }
 
 load {
