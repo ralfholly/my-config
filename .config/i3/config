@@ -13,6 +13,7 @@ font pango:DejaVu Sans Mono 8
 # they are included here as an example. Modify as you see fit.
 
 set $i3lockwall i3lock -n --color 000020
+set $wallpaper /home/ralf/wallpapers/nasa-images/366025.jpg
 
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
 # screen before suspend. Use loginctl lock-session to lock your screen.
@@ -224,12 +225,12 @@ mode "$mode_system" {
 }
 
 # lock
-exec_always --no-startup-id xautolock -time 10 -locker "$i3lockwall" -killtime 10 -killer "systemctl suspend"
+exec_always --no-startup-id xautolock -notify 5 -notifier "feh -F --zoom fill $wallpaper --on-last-slide quit --slideshow-delay 6" -time 10 -locker "$i3lockwall" -killtime 20 -killer 'systemctl suspend'
 bindsym Ctrl+Mod1+l exec --no-startup-id $i3lockwall
 bindsym Ctrl+Mod1+Delete MODE "$mode_system"
 
 exec --no-startup-id i3-msg 'workspace 1:shell; exec /usr/bin/xterm -e "TERM=xterm-256color /usr/bin/tmux"'
-exec --no-startup-id feh --bg-fill /home/ralf/wallpapers/nasa-images/366025.jpg
+exec --no-startup-id "feh --bg-fill $wallpaper"
 
 bindsym $mod+n kill
 bindsym $mod+u workspace number $ws1
